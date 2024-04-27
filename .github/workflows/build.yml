@@ -50,7 +50,7 @@ jobs:
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }} 
       - name: Generate ISO  
-        uses: ublue-os/lorax-compose@v1.0.0
+        uses: ublue-os/lorax-compose
         id: build
         with:
           ostree-oci-ref: ghcr.io/ublue-os/silverblue-main:40
