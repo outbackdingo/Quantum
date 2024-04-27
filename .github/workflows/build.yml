@@ -49,21 +49,12 @@ jobs:
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }} 
-  build-iso:
-    name: Generate and Release ISOs
-    runs-on: ubuntu-latest
-    if: needs.release-please.outputs.releases_created
-    container: 
-      image: fedora:38
-      options: --privileged -v /dev/:/dev
-    steps:
-      - uses: actions/checkout@v3
       - name: Generate ISO  
         uses: ublue-os/lorax-compose@v1.0.0
         id: build
         with:
-          ostree-oci-ref: ghcr.io/ublue-os/silverblue-main:38
-          fedora-release: 38
+          ostree-oci-ref: ghcr.io/ublue-os/silverblue-main:40
+          fedora-release: 40
       - name: install github CLI
         run: |
           sudo dnf install 'dnf-command(config-manager)' -y
