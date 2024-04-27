@@ -49,23 +49,3 @@ jobs:
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }} 
-
-      - name: Generate ISO  
-        uses: ublue-os/isogenerator@main
-        id: isogenerator
-        with:
-          image-name: quantum-hyprland
-          installer-repo: releases
-          installer-major-version: 40
-      
-      - name: Upload ISO
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run:
-          gh release upload ${{ needs.release-please.outputs.tag }} ${{ steps.isogenerator.outputs.iso-path }} -R ublue-os/main --clobber
-      
-      - name: Upload SHA256SUM
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run:
-          gh release upload ${{ needs.release-please.outputs.tag }} ${{ steps.isogenerator.outputs.sha256sum-path }} -R ublue-os/main --clobber
