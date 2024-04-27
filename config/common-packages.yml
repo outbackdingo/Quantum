@@ -57,6 +57,8 @@ install:
 
 # terminal
   - foot
+  - tilix
+  - make
 
 # notifications
   - dunst
