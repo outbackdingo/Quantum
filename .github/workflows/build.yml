@@ -1,4 +1,4 @@
-name: bluebuild
+name: build-quantum
 on:
   schedule:
     - cron: "00 17 * * *" # build at 17:00 UTC every day 
@@ -11,7 +11,7 @@ on:
   workflow_dispatch: # allow manually triggering builds
 jobs:
   bluebuild:
-    name: Build Custom Image
+    name: Build quantum
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -21,12 +21,29 @@ jobs:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
-          # !! Add your recipes here 
-          - recipe.yml
+          - recipe-hyprland.yml
+          - recipe-hyprland-nvidia.yml
     steps:
-       # the build is fully handled by the reusable github action
-      - name: Build Custom Image
-        uses: blue-build/github-action@v1.3
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Add yq (for reading recipe.yml)
+        uses: mikefarah/yq@v4.42.1
+
+      - name: Gather image data from recipe
+        run: |
+          echo "IMAGE_NAME=$(yq '.name' ./config/${{ matrix.recipe }})" >> $GITHUB_ENV
+          echo "IMAGE_MAJOR_VERSION=$(yq '.image-version' ./config/${{ matrix.recipe }})" >> $GITHUB_ENV
+          BASE_IMAGE=$(yq '.base-image' ./config/${{ matrix.recipe }})
+          echo "BASE_IMAGE_NAME=$(echo $BASE_IMAGE | sed 's/.*\/.*\///')" >> $GITHUB_ENV
+
+      - name: Verify base image
+        uses: EyeCantCU/cosign-action/verify@v0.2.2
+        with:
+          containers: ${{ env.BASE_IMAGE_NAME }}:${{ env.IMAGE_MAJOR_VERSION }}
+
+      - name: Build quantum
+        uses: blue-build/github-action@v1.3.0
         with:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
