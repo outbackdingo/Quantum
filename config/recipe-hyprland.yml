@@ -27,9 +27,11 @@ modules:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://repo.vivaldi.com/stable/vivaldi-fedora.repo
       - https://copr.fedorainfracloud.org/coprs/alebastr/sway-extras/repo/fedora-40/alebastr-sway-extras-fedora-40.repo
+      - https://cli.github.com/packages/rpm/gh-cli.repo
     install:
       - tailscale
       - swww
+      - gh
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
