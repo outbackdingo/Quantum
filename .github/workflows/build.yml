@@ -49,24 +49,3 @@ jobs:
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }} 
-      - name: Generate ISO  
-        uses: ublue-os/lorax-compose
-        id: build
-        with:
-          ostree-oci-ref: ghcr.io/ublue-os/silverblue-main:40
-          fedora-release: 40
-      - name: install github CLI
-        run: |
-          sudo dnf install 'dnf-command(config-manager)' -y
-          sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-          sudo dnf install gh -y
-      - name: Upload ISO
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run:
-          gh release upload ${{ needs.release-please.outputs.tag }} ${{ steps.isogenerator.outputs.iso-path }} -R ublue-os/main --clobber
-      - name: Upload SHA256SUM
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run:
-          gh release upload ${{ needs.release-please.outputs.tag }} ${{ steps.isogenerator.outputs.sha256sum-path }} -R ublue-os/main --clobber
