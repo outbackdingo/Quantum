@@ -42,6 +42,9 @@ modules:
   - type: files
     files:
       - hyprland/usr: /usr 
+      - usr: /usr 
+      - etc: /etc 
+      - opt: /var/opt
 
   - from-file: common-files.yml
   - from-file: common-scripts.yml
