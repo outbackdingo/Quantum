@@ -1,0 +1,21 @@
+set $wallpaper /home/dingo/Pictures/wallpapers/Dynamic-Wallpapers/Light/City_light.jpg
+
+set $background #0c0e12
+set $foreground #c6c7c9
+
+set $color0 #0c0e12
+set $color1 #3D6391
+set $color2 #4D739B
+set $color3 #6C788A
+set $color4 #527AA1
+set $color5 #138F94
+set $color6 #6D8A9F
+set $color7 #c6c7c9
+set $color8 #8a8b8c
+set $color9 #3D6391
+set $color10 #4D739B
+set $color11 #6C788A
+set $color12 #527AA1
+set $color13 #138F94
+set $color14 #6D8A9F
+set $color15 #c6c7c9

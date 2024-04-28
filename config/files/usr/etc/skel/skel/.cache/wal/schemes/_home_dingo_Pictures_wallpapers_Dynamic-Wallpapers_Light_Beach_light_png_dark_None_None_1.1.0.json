@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/dingo/Pictures/wallpapers/Dynamic-Wallpapers/Light/Beach_light.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0A0A08",
+        "foreground": "#d9d4ca",
+        "cursor": "#d9d4ca"
+    },
+    "colors": {
+        "color0": "#0A0A08",
+        "color1": "#537A84",
+        "color2": "#2694AC",
+        "color3": "#45ABBD",
+        "color4": "#5CCFB9",
+        "color5": "#4EB8C1",
+        "color6": "#64D5C8",
+        "color7": "#d9d4ca",
+        "color8": "#97948d",
+        "color9": "#537A84",
+        "color10": "#2694AC",
+        "color11": "#45ABBD",
+        "color12": "#5CCFB9",
+        "color13": "#4EB8C1",
+        "color14": "#64D5C8",
+        "color15": "#d9d4ca"
+    }
+}

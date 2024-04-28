@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/dingo/Pictures/wallpapers/Dynamic-Wallpapers/Dark/Village-Dark.png",
+    "alpha": "100",
+    "special": {
+        "background": "#090b0c",
+        "foreground": "#90a8cd",
+        "cursor": "#90a8cd"
+    },
+    "colors": {
+        "color0": "#090b0c",
+        "color1": "#523A4C",
+        "color2": "#314567",
+        "color3": "#5A4A5B",
+        "color4": "#AB5337",
+        "color5": "#F3B94F",
+        "color6": "#28529B",
+        "color7": "#90a8cd",
+        "color8": "#64758f",
+        "color9": "#523A4C",
+        "color10": "#314567",
+        "color11": "#5A4A5B",
+        "color12": "#AB5337",
+        "color13": "#F3B94F",
+        "color14": "#28529B",
+        "color15": "#90a8cd"
+    }
+}
