@@ -36,18 +36,15 @@ modules:
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-  
+ 
   - from-file: sddm-packages.yml
   - from-file: common-packages.yml
   - from-file: hyprland-packages.yml
-  
+ 
   - type: files
     files:
       - usr: /usr
-      - etc: /etc
-      - opt: /var/opt
-      
-                  
+
   - from-file: common-files.yml
   - from-file: common-scripts.yml
   - from-file: hyprland-scripts.yml  

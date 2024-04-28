@@ -42,8 +42,6 @@ modules:
   - type: files
     files:
       - usr: /usr 
-      - etc: /etc 
-      - opt: /var/opt
 
   - from-file: common-files.yml
   - from-file: common-scripts.yml
