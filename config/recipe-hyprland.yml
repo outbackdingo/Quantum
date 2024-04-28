@@ -10,6 +10,12 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: bling
+    install:
+      # - 1password # install 1Password (stable) and `op` CLI tool
+      - ublue-update # https://github.com/ublue-os/ublue-update
+      - dconf-update-service # a service unit that updates the dconf db on boot
+      - laptop # installs TLP and configures your system for laptop usage 
   - type: fonts
     fonts:
       nerd-fonts:
