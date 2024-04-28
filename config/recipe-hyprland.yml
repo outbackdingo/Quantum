@@ -41,7 +41,6 @@ modules:
   
   - type: files
     files:
-      - hyprland/usr: /usr 
       - usr: /usr 
       - etc: /etc 
       - opt: /var/opt

@@ -30,6 +30,7 @@ modules:
     install:
       - tailscale
       - swww
+      - vivaldi
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -42,7 +43,10 @@ modules:
   
   - type: files
     files:
-      - hyprland/usr: /usr 
+      - usr: /usr
+      - etc: /etc
+      - opt: /var/opt
+      
                   
   - from-file: common-files.yml
   - from-file: common-scripts.yml
