@@ -59,6 +59,7 @@ install:
   - foot
   - tilix
   - zsh
+  - kubernetes-client
 
 # notifications
   - dunst
