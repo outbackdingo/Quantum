@@ -60,6 +60,9 @@ install:
   - tilix
   - zsh
   - kubernetes-client
+  - go
+  - rust
+  - mc
 
 # notifications
   - dunst
