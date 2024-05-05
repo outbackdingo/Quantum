@@ -64,6 +64,7 @@ install:
   - rust
   - mc
   - telegram-desktop
+  - xrandr
 
 
 # notifications
