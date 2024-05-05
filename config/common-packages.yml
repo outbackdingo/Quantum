@@ -63,6 +63,8 @@ install:
   - go
   - rust
   - mc
+  - telegram-desktop
+
 
 # notifications
   - dunst
