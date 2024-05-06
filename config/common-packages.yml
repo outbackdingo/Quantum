@@ -65,6 +65,7 @@ install:
   - mc
   - telegram-desktop
   - xrandr
+  - nmap
 
 
 # notifications
