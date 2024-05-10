@@ -44,6 +44,7 @@ install:
   - perl-JSON-PP
   - perl-Thread-Queue
   - perl-Time-Piece
+  - re2c
   
 # sound
   - wireplumber
