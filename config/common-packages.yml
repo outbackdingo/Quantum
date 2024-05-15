@@ -45,6 +45,7 @@ install:
   - perl-Thread-Queue
   - perl-Time-Piece
   - re2c
+  - libreoffice
   
 # sound
   - wireplumber
