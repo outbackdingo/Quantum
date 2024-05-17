@@ -47,6 +47,7 @@ install:
   - re2c
   - libreoffice
   - virt-viewer
+  - virt-manager
   
 # sound
   - wireplumber
