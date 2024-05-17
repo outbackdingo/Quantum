@@ -46,6 +46,7 @@ install:
   - perl-Time-Piece
   - re2c
   - libreoffice
+  - virt-viewer
   
 # sound
   - wireplumber
