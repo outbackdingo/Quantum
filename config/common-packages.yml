@@ -48,6 +48,7 @@ install:
   - libreoffice
   - virt-viewer
   - virt-manager
+  - virt-install
   
 # sound
   - wireplumber
