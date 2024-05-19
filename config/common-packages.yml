@@ -49,7 +49,7 @@ install:
   - virt-viewer
   - virt-manager
   - virt-install
-  - node
+  - nodejs
   - npm
   
 # sound
