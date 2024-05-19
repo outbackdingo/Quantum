@@ -49,6 +49,8 @@ install:
   - virt-viewer
   - virt-manager
   - virt-install
+  - node
+  - npm
   
 # sound
   - wireplumber
