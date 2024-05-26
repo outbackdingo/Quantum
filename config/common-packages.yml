@@ -52,6 +52,7 @@ install:
   - nodejs
   - npm
   - rpi-imager
+  - minicom
   
 # sound
   - wireplumber
