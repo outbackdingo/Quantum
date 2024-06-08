@@ -66,6 +66,7 @@ install:
   - bluez
   - bluez-tools
   - blueman
+  - netbird
 
 # file manager
   - thunar
