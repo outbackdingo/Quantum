@@ -53,6 +53,9 @@ install:
   - npm
   - rpi-imager
   - minicom
+  - minicom
+  - tftp
+  - tftp-server
   
 # sound
   - wireplumber
