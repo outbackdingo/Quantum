@@ -35,6 +35,7 @@ modules:
       - https://download.docker.com/linux/fedora/docker-ce.repo
       - https://pkg.cloudflare.com/cloudflared-ascii.repo
       - https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+      - https://cli.github.com/packages/rpm/gh-cli.repo
     install:
       - tailscale
       - cloudflared
@@ -46,6 +47,7 @@ modules:
       - docker-compose-plugin
       - packer
       - terraform
+      - gh
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
